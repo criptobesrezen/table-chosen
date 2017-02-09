@@ -214,13 +214,17 @@ function get_edit_item_form()
   echo '</tr>';
   echo '<tr>'; 
   echo '<td>Автор</td>'; 
-  echo '<td>
-                <input  name="author"
-                    type="text"
-                    value="'.$item['author'].'"
-                    data-placeholder="Имя автора"
-                    multiple class="chosen-select"></input>
-        </td>'; 
+  echo '<td><select name="author" type="text" data-placeholder="Автор" multiple class="chosen-select">';
+  $query = "SELECT * FROM `authors`"; 
+  $aut = mysql_query($query); 
+    if (!$aut) {echo "ошибка запроса";} 
+        if (mysql_num_rows($aut) > 0){ 
+        while($authors = mysql_fetch_array($aut)){ 
+  $author = $authors['author']; 
+  echo "<option value='".$authors['author']."'>".$authors['author']."</option>"; 
+         } 
+        }
+  echo '</select></td>'; 
   echo '</tr>'; 
   echo '<tr>'; 
   echo '<td><input type="submit" value="Сохранить"></td>'; 

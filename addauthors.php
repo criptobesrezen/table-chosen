@@ -183,7 +183,7 @@ function get_edit_item_form()
   echo '<table>'; 
   echo '<tr>'; 
   echo '<td>Автор</td>'; 
-  echo '<td><input name="author" type="text" value="'.$item['author'].'" data-placeholder="Имя автора" multiple class="chosen-select"></input></td>'; 
+  echo '<td><input name="author" type="text" value="'.$item['author'].'" data-placeholder="Имя автора"></input></td>'; 
   echo '</tr>'; 
   echo '<tr>'; 
   echo '<td><input type="submit" value="Внести"></td>'; 
