@@ -1,6 +1,5 @@
 <?php
-    $host = 'localhost';// Сервер
-    $datebase = 'bdfb'; // Имя базы данных
-    $user = 'bdfbl';    // Имя пользователя
-    $password = 'bdfb2';// Пароль
-?>
+define('DB_HOST', 'localhost'); // Сервер
+define('DB_NAME', 'bdfb');      // Имя базы данных
+define('DB_USER', 'root');      // Имя пользователя
+define('DB_PASSWORD', 'root');  // Пароль
